@@ -34,17 +34,19 @@ export default function WeatherWidget() {
         setError(null);
 
         //Fetching waether data
-        try {
-            const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${trimmedLocation}`);
-            if (!response.ok) {
-                throw new Error("City not found");
-            }
-            const data = await response.json();
-            const weatherData: WeatherData = {
-                temperature: data.current.temp_c,
-                description: data.current.condition.text,
-                location: data.location.name,
-                unit: "C",
+         const response = await fetch(
+        `https://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${trimmedLocation}`
+      );
+      if (!response.ok) {
+        throw new Error("City not found");
+      }
+      const data = await response.json();
+      const weatherData: WeatherData = {
+        temperature: data.current.temp_c, // Get temperature in Celsius
+        description: data.current.condition.text, // Get weather description
+        location: data.location.name, // Get location name
+        unit: "C", // Unit for temperature
+      };
             };
             setWeather(weatherData);
         } catch (error) {
