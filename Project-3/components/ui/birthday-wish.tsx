@@ -90,8 +90,8 @@ const totalCandles: number = 5 // Total number of candles
       >
         <Card className="mx-auto overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl border-2 border-black">
           <CardHeader className="text-center">
-            <CardTitle className="text-4xl font-bold text-black">Happy 20th Birthday!</CardTitle>
-            <CardDescription className="text-2xl font-semibold text-gray-600">Asharib Ali</CardDescription>
+            <CardTitle className="text-4xl font-bold text-black">Happy 18th Birthday!</CardTitle>
+            <CardDescription className="text-2xl font-semibold text-gray-600">MAX</CardDescription>
             <p className="text-lg text-gray-500">September 4th</p>
           </CardHeader>
           <CardContent className="space-y-6 text-center">
